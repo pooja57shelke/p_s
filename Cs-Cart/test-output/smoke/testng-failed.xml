@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [smoke]" parallel="classes">
+  <test thread-count="2" name="CsCart(failed)" parallel="classes">
+    <classes>
+      <class name="CsCart.SignIn">
+        <methods>
+          <include name="signin"/>
+        </methods>
+      </class> <!-- CsCart.SignIn -->
+    </classes>
+  </test> <!-- CsCart(failed) -->
+</suite> <!-- Failed suite [smoke] -->

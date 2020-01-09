@@ -1,5 +1,6 @@
 package CsCart;
 
+import java.sql.Driver;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -8,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 @Test
 public class SignIn 
@@ -15,7 +17,8 @@ public class SignIn
 		static WebElement dropMonth;
 		static WebElement dropYear;
 		WebElement searchbox;
-		public static void main(String[] args) {
+		public void signin() {
+		//public static void main(String[] args) {
 		//System.setProperty("webdriver.chrome.driver", "F:\\\\visionit\\\\chromedriver.exe");
 		WebDriver Driver=new ChromeDriver();
 		Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -45,12 +48,17 @@ public class SignIn
 	     //click on laptop
 	     Driver.findElement(By.xpath(" //img[@id=\"det_img_219\"]")).click();
 	     Reporter.log("Search Product Laptop <br>",true);
+	     //quantity
+	     Driver.findElement(By.xpath("//a[@class='cm-increase ty-value-changer__increase']")).click();
+	     
 	     //Add to cart
 	     Driver.findElement(By.xpath(" //button[@id=\"button_cart_219\"]")).click();
-	     Reporter.log("Add to cart product successfully<br>",true);
-	}
+	     Reporter.log("Add to cart product successfully",true);
+		}
 	
+		
 	
-	}
+		}
+	
 
 

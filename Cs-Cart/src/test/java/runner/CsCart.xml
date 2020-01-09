@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <suite name="smoke" thread-count="2" parallel="classes">
 	<test name="CsCart">
 		<classes>
-			<class name="CsCart.Register"></class>
 			<class name="CsCart.SignIn"></class>
 		</classes>
 	</test>
